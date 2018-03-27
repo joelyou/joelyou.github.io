@@ -79,7 +79,7 @@
 <meta property="og:image" content="http://yoursite.com/img/20170921_01.jpg">
 <meta property="og:image" content="http://yoursite.com/img/hexo4000.png">
 <meta property="og:image" content="http://yoursite.com/img/20170921_02.jpg">
-<meta property="og:updated_time" content="2018-03-07T01:51:53.000Z">
+<meta property="og:updated_time" content="2018-03-27T07:46:44.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="第一篇博客">
 <meta name="twitter:description" content="尝试自己写博客 万事开头难，找了很多资料，终于搭建起来了 没有主题，没有自己的域名，只是一个普通的博客，先写一下试试感觉，哈哈哈 为何自己要写博客？以前做过的东西老是忘，虽然后来能百度到自己所需要的东西，但是肯定是费时费力，有些东西是可以记录一下的，这样下次再遇到,能第一时间知道自己以前遇到过，处理思路和方法就能出现在脑海里了，而写博客就能加深对一个东西的理解，而且能够锻炼自己写作能力，梳理思路，">
@@ -320,6 +320,12 @@
 <h3 id="3-上传和更新文章"><a href="#3-上传和更新文章" class="headerlink" title="3.上传和更新文章"></a>3.上传和更新文章</h3><p>如果自己要写新文章，而不是让博客里只有一个简单的hello world<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$hexo n <span class="string">'newPage name'</span></div></pre></td></tr></table></figure></p>
 <p>配置好后，先生成静态页面，不生成，就无法显示之前配置的效果<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$hexo g</div></pre></td></tr></table></figure></p>
 <p>然后直接配置到github上，因为之前设置了ssh，所有可以直接上传，因为ssh是加密的数据流，具有一定的安全性<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$hexo d</div></pre></td></tr></table></figure></p>
+<p>每次修改完本地的文件后要执行以下命令，重新部署到github上：<br>hexo clean<br>hexo generate<br>hexo deploy或者hexo d<br>常用命令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">hexo new &quot;postName&quot; #新建文章</div><div class="line">hexo new page &quot;pageName&quot; #新建页面</div><div class="line">hexo generate #生成静态页面至public目录</div><div class="line">hexo server #开启预览访问端口（默认端口4000，&apos;ctrl + c&apos;关闭server）</div><div class="line">hexo deploy #将.deploy目录部署到GitHub</div><div class="line">hexo help # 查看帮助</div><div class="line">hexo version #查看Hexo的版本</div></pre></td></tr></table></figure>
+<p>Hexo简写命令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">hexo n &quot;postName&quot; #新建文章，或者source\_posts手动编辑</div><div class="line">hexo g #生成public静态文件至public目录</div><div class="line">hexo s #本地发布预览效果 http://localhost:4000 (&apos;ctrl + c&apos;关闭server)</div><div class="line">hexo d #将.deploy目录部署到GitHub</div><div class="line"></div><div class="line">作者：风澈vio</div><div class="line">链接：https://www.jianshu.com/p/1cd86fac2585</div><div class="line">來源：简书</div><div class="line">著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</div></pre></td></tr></table></figure>
+<p>Hexo复合命令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">hexo d -g #生成并部署上传</div><div class="line">hexo s -g #生成并本地发布预览</div><div class="line">hexo clean &amp;&amp; hexo d -g #清空缓存然后生成并部署上传</div><div class="line">hexo clean &amp;&amp; hexo s -g #清空缓存然后生成并本地发布预览</div></pre></td></tr></table></figure>
 <p>此时可以打开<br>用户名.github.io来欣赏自己的搭建博客了</p>
 <p>这样就可以在你的hexo主文件夹\source_posts(我新生成的文章文件在文稿目录下的 myhexo\source_posts中)<br>然后利用markdown语法，对md文件进行博客内容的编写，markdown可以是一种提高写作效率语法，目的让我们更加专注于内容，可以看看这篇博客<a href="http://www.markdown.cn/" target="_blank" rel="external">Markdown语法说明</a></p>
 <h2 id="还有什么可以折腾的呢？"><a href="#还有什么可以折腾的呢？" class="headerlink" title="还有什么可以折腾的呢？"></a>还有什么可以折腾的呢？</h2><ul>
